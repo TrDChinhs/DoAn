@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="NDTQM.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="d-flex align-items-center">
+                <a href="http://127.0.0.1:5500/TrangChu.html"><img src="https://i.pinimg.com/originals/fb/68/c8/fb68c8477c5d95f462f56421810e24d6.png" alt="Logo" class="logo"></a>
+                <p>TFT</p>
+                <div class="menu-buttons">
+                    <a href="http://127.0.0.1:5500/TinTuc.html"><button class="button-28" style="margin-left: 40px;">TIN TỨC</button></a>
+                    <a href="http://127.0.0.1:5500/NDTQM.html"><button class="button-28">NỘI DUNG TỔNG QUAN MÙA</button></a>    
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="menu-icon" style="margin-right: 25px; color: black;" onclick="toggleMenu()">
+                    <img src="https://icon-library.com/images/hamburger-icon-white/hamburger-icon-white-16.jpg" style="width: 35px;">
+                </div> 
+                <div class="menu-buttons">
+                    <button class="button-28">HỖ TRỢ</button>
+                </div>
+                <button id="playBtn" class="button-27">CHƠI NGAY</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <div><a href="http://127.0.0.1:5500/TrangChu.html"><img src="https://i.pinimg.com/originals/fb/68/c8/fb68c8477c5d95f462f56421810e24d6.png" style="margin: 0px 30px;" alt="Logo" class="logo"></a></div>
+        <button class="button-28"><a href="http://127.0.0.1:5500/TinTuc.html">TIN TỨC</a></button>
+        <button class="button-28"><a href="http://127.0.0.1:5500/NDTQM.html">NỘI DUNG TỔNG QUAN MÙA</a></button>
+        <button class="button-28"><a href="#">HỖ TRỢ</a></button>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div style="width: 100%; text-align: center; margin-top: 2%;">
+            <img style="width: 100px;" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Riot_Games_wordmark.svg">
+        </div>
+        <div class="modal-content">
+            <h2 style="text-align: center; font-weight: 700;">Đăng nhập</h2>
+            <form style="text-align: center;">
+                <input type="text" id="username" name="username" placeholder="Nhập tên người dùng"><br>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu"><br>
+                <div style="display: flex; flex-direction: row; height: 40px; align-items: center; margin-top: 5px;">
+                    <input style="width: 20px; margin: 0px; margin-right: 10px; " type="checkbox" id="rememberMe" name="rememberMe" class="custom-checkbox">
+                    <label style="margin: 0; font-weight: 600;" for="rememberMe">Lưu đăng nhập</label>
+                </div>
+                <div class="login-button-container" >
+                    <a href="#"><div class="login-button" data-color="blue"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png"></div></a>
+                    <a href="#"><div class="login-button" data-color="white"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"></div></a>
+                    <a href="#"><div class="login-button" data-color="black"><img src="https://static-00.iconduck.com/assets.00/apple-icon-1662x2048-d80o29ez.png" style="width: 1rem;"></div></a>
+                    <a href="#"><div class="login-button" data-color="green"><i class="fab fa-xbox button-icon" style="color: #ffffff; font-size: 1rem; margin-top: 9px;"></i></div></a>
+                    <a href="#"><div class="login-button" data-color="dark-blue"><i class="fab fa-playstation button-icon" style="color: white; margin-top: 9px;"></i></div></a>
+                </div>
+                <div class="button-login" id="loginBtn" style="margin-top: 80px; margin-bottom: 20px;">
+                    <i class="fas fa-chevron-right" style="font-size: 2rem; color: #D5D6D6; margin-top: 22px;"></i>
+                </div>
+            </form>
+            <div class="cantlogin" style="text-align: center;">
+                <a href="#">Không thể đăng nhập?</a><br>
+                <a href="#">Tạo tài khoản</a>
+            </div>
+        </div>
+        <div class="footer-login">
+            <ul>
+                <li><a href="#">Hỗ trợ</a></li>
+                <li><a href="#">Chính sách Quyền riêng tư</a></li>
+                <li><a href="#">Điều Khoản Sử Dụng</a></li>
+                <li><a href="#">Tùy Chọn Cookies</a></li>
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="background" style="background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/6a71feedb32fe300f4a0dadc1cc00576f6051d21-3840x1152.png?auto=format&fit=fill&q=80&w=10000');">
+            <div class="tft" style="text-shadow: none; line-height: 2rem; margin-top: 150px; letter-spacing: 0; font-weight: 700;">
+                <p style="font-size: 1.5rem;">ĐẤU TRƯỜNG CHÂN LÝ</p><br>
+                <p style="line-height: 4rem;">HỖN LOẠN HUYỀN DIỆU</p><br>
+            </div>
+            <div class="text" style="top: 45%"> 
+                <p>Rút ra sách phép và vung chiếc đũa thần ma thuật của bạn để đánh dấu hành trình tiếp theo
+                <br>của mình tại Đồng Quy Giới. Liệu bạn có thể tận dụng óc sáng tạo và hô biến ra những phép thuật kỳ diệu
+                <br>để mở đường tới chiến thắng cuối cùng hay không? Hãy nhanh lên nào! Thành Phố Của
+                <br>Những Kẻ Mộng Mơ đang chờ đón bạn phía trước.</p>
+            </div>
+        </div>
+        <div class="background" style="background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/3a6cc89ff92e406bfa2c1a6becc3deee33c20e73-3840x1360.jpg?auto=format&fit=fill&q=80&h=10000'); margin: 0;">
+            <div class="row">
+                <div class="column">
+                    <div class="text-container">
+                        <div class="text-content">
+                            <p style="font-size: 4rem;">TẬP HỢP<br>PHÉP THUẬT</p>
+                            <p>Hãy mang trí tò mò, hỗn loạn và sự sáng tạo tới Thành Phố Của<br>
+                                                Những Kẻ Mộng Mơ cùng vô vàn tộc hệ như Băng Giá, Thông Đạo, Kỳ Quái<br>
+                                                và.. cả Ong Mật nữa?! Đúng vậy. Tại đây, kể cả ong cũng rất nhiệm màu!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-content">
+                        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/0e5ccc7599def9c5bf6e5de7a5c510921e8f50cc-1920x1080.png?auto=format&fit=fill&q=80&w=10000">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background" style="background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/92b8e462172a6c7eaf42e91e3ff30164d71e98b2-3840x1360.png?auto=format&fit=fill&q=80&h=10000'); margin: 0;">
+            <div class="row">
+                <div class="column">
+                    <div class="image-content">
+                        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/90fd9c03a1c9e41a1de818800ba5c189d0de7156-1920x1080.png?auto=format&fit=fill&q=80&w=10000">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="text-container">
+                        <div class="text-content">
+                            <p style="font-size: 4rem;">VÔ CÙNG MÊ HOẶC</p>
+                            <p>Khiến đối thủ choáng ngợp với chiếc đũa thần kỳ quái trong cơ chế mùa giải mới:<br>
+                                                Bùa, nơi những phép thuật mạnh nhất có thể được tậu từ chính cửa hàng<br>
+                                                của bạn. Từ hỗ trợ giao tranh cho tới chi tiêu kinh tế, những chiếc Bùa này<br>
+                                                chắc chắn sẽ giúp bạn mang về chiến thắng trong trận chiến tiếp theo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background" style="background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/e5b2776ea3f11e453f10c512a4e6705a4f93008b-3840x1360.png?auto=format&fit=fill&q=80&h=10000'); margin: 0;">
+            <div class="row">
+                <div class="column">
+                    <div class="text-container">
+                        <div class="text-content">
+                            <p style="font-size: 4rem;">PHẦN THƯỞNG VÉ</p>
+                            <p>Cho dù bạn đang hất tung chiếc mũ phù thủy của mình hay triệt hạ đối thủ<br>
+                                                bằng những chiếc bánh "siêuuuu" ngọt ngào, Vé và Vé Hỗn Loạn Huyền Diệu<br>
+                                                sẽ "triệu gọi" những trang bị, chưởng lực, Linh Thú mới kỳ diệu nhất, cùng Sân<br>
+                                                Đấu Tàng Thư Ma Pháp.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-content img">
+                        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/437775619e5f60d16935ce824f4fc13f0e52d2d7-1920x1080.png?auto=format&fit=fill&q=80&w=10000">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background" style="background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/996b0eb3ea482eb714e546f24047565874bff583-3840x1900.png?auto=format&fit=fill&q=80&w=10000'); margin: 0;">
+            <p style="text-align: center; color: #181326; font-size: 4rem; font-weight: 700;">CÁC LINH THÚ THẦN KỲ MỚI</p>
+            <div class="lt-container">
+                <div class="lt-column">
+                    <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/07f4d578372697e7929d8310abe7c3a3395c144b-600x800.png?auto=format&fit=fill&q=80&w=10000">
+                    <div class="lt-column-text">
+                        <p>Gwen Tiệm Trà Ngọt Ngào Tí Nị - Hàng Hiệu</p>
+                        <p style="font-weight: 500;">Bạn không chạy thoát khỏi những chiếc kéo được đâu, thay vào đó hãy dùng chúng để làm bánh nhé!</p>
+                    </div>
+                </div>
+                <div class="lt-column">
+                    <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1add1b38c8aba0759d413a87d518b65e34f5285e-600x800.png?auto=format&fit=fill&q=80&w=10000">
+                    <div class="lt-column-text">
+                        <p>Miss Fortune Thỏ Chỉ Huy Tí Nị</p>
+                        <p style="font-weight: 500;">Hãy tiến lên! Đám Tộc Thượng Cổ đó không thể tự bại trận được đâu.</p>
+                    </div>
+                </div>
+                <div class="lt-column">
+                    <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/9b4095b25cf3ce89054da4ff2621d243c743177f-600x800.png?auto=format&fit=fill&q=80&w=10000">
+                    <div class="lt-column-text">
+                        <p>Zed Tử Thần Không Gian Tí Nị</p>
+                        <p style="font-weight: 500;">Sức mạnh vũ trụ vô tận ẩn trong vũ khí siêu hạng nhỏ bé.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-icon d-flex justify-content-between">    
+            <a href="https://www.youtube.com/@dtclvn">
+                <img src="asset\Image\YT icon.png" style="width: 55px; margin-top: -5px;" class="footer-image" alt="YouTube Icon">
+            </a>  
+            <a href="https://www.facebook.com/DTCLVN">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-app-round-white-icon.png" class="footer-image" alt="Facebook Icon">
+                </a>   
+            <a href="https://www.instagram.com/dtclvn/">
+                <img src="https://troyredfern.com/wp-content/uploads/2021/04/new-instagram-logo-white-border-icon-png-large.png" class="footer-image" alt="Ins Icon">
+            </a>              
+        </div>  
+        <div class="footer-button">
+            <button class="button-28">CHÍNH SÁCH QUYỀN RIÊNG TƯ</button>
+            <button class="button-28">ĐIỀU KHOẢN DỊCH VỤ</button>
+            <button class="button-28">TÙY CHỌN COOKIE</button>
+        </div> 
+        <p class="footer-text">© 2019-2022 bởi Tập Đoàn Riot Games. ĐẤU TRƯỜNG CHÂN LÝ và mọi logo liên quan là nhãn hiệu,<br>nhãn hiệu dịch vụ và/hoặc nhãn hiệu đã đăng ký của Tập Đoàn Riot Games.</p>
+    </footer>
+    <script src="NDTQC.js"></script>
+</body>
+</html>

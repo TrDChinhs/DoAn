@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="TinTuc.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="d-flex align-items-center">
+                <a href="http://127.0.0.1:5500/TrangChu.html"><img src="https://i.pinimg.com/originals/fb/68/c8/fb68c8477c5d95f462f56421810e24d6.png" alt="Logo" class="logo"></a>
+                <p>TFT</p>
+                <div class="menu-buttons">
+                    <a href="http://127.0.0.1:5500/TinTuc.html"><button class="button-28" style="margin-left: 40px;">TIN TỨC</button></a>
+                    <a href="http://127.0.0.1:5500/NDTQM.html"><button class="button-28">NỘI DUNG TỔNG QUAN MÙA</button></a>    
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="menu-icon" style="margin-right: 25px; color: black;" onclick="toggleMenu()">
+                    <img src="https://icon-library.com/images/hamburger-icon-white/hamburger-icon-white-16.jpg" style="width: 35px;">
+                </div> 
+                <div class="menu-buttons">
+                    <button class="button-28">HỖ TRỢ</button>
+                </div>
+                <button id="playBtn" class="button-27">CHƠI NGAY</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <div><a href="http://127.0.0.1:5500/TrangChu.html"><img src="https://i.pinimg.com/originals/fb/68/c8/fb68c8477c5d95f462f56421810e24d6.png" style="margin: 0px 30px;" alt="Logo" class="logo"></a></div>
+        <button class="button-28"><a href="http://127.0.0.1:5500/TinTuc.html">TIN TỨC</a></button>
+        <button class="button-28"><a href="http://127.0.0.1:5500/NDTQM.html">NỘI DUNG TỔNG QUAN MÙA</a></button>
+        <button class="button-28"><a href="#">HỖ TRỢ</a></button>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div style="width: 100%; text-align: center; margin-top: 2%;">
+            <img style="width: 100px;" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Riot_Games_wordmark.svg">
+        </div>
+        <div class="modal-content">
+            <h2 style="text-align: center; font-weight: 700;">Đăng nhập</h2>
+            <form style="text-align: center;">
+                <input type="text" id="username" name="username" placeholder="Nhập tên người dùng"><br>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu"><br>
+                <div style="display: flex; flex-direction: row; height: 40px; align-items: center; margin-top: 5px;">
+                    <input style="width: 20px; margin: 0px; margin-right: 10px; " type="checkbox" id="rememberMe" name="rememberMe" class="custom-checkbox">
+                    <label style="margin: 0; font-weight: 600;" for="rememberMe">Lưu đăng nhập</label>
+                </div>
+                <div class="login-button-container" >
+                    <a href="#"><div class="login-button" data-color="blue"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png"></div></a>
+                    <a href="#"><div class="login-button" data-color="white"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"></div></a>
+                    <a href="#"><div class="login-button" data-color="black"><img src="https://static-00.iconduck.com/assets.00/apple-icon-1662x2048-d80o29ez.png" style="width: 1rem;"></div></a>
+                    <a href="#"><div class="login-button" data-color="green"><i class="fab fa-xbox button-icon" style="color: #ffffff; font-size: 1rem; margin-top: 9px;"></i></div></a>
+                    <a href="#"><div class="login-button" data-color="dark-blue"><i class="fab fa-playstation button-icon" style="color: white; margin-top: 9px;"></i></div></a>
+                </div>
+                <div class="button-login" id="loginBtn" style="margin-top: 80px; margin-bottom: 20px;">
+                    <i class="fas fa-chevron-right" style="font-size: 2rem; color: #D5D6D6; margin-top: 22px;"></i>
+                </div>
+            </form>
+            <div class="cantlogin" style="text-align: center;">
+                <a href="#">Không thể đăng nhập?</a><br>
+                <a href="#">Tạo tài khoản</a>
+            </div>
+        </div>
+        <div class="footer-login">
+            <ul>
+                <li><a href="#">Hỗ trợ</a></li>
+                <li><a href="#">Chính sách Quyền riêng tư</a></li>
+                <li><a href="#">Điều Khoản Sử Dụng</a></li>
+                <li><a href="#">Tùy Chọn Cookies</a></li>
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="tintuc">
+            <p>TIN TỨC</p>
+        </div>
+        <div class="container">
+            <div class="row" id="news-container">
+                <div class="col-12 col-xl-4 p-0">
+                    <a href="#">
+                        <div class="image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/306c1f627dd1108522008d811b511e415dbdc9ab-1280x720.jpg?auto=format&fit=fill&q=80&w=10000">
+                        </div>
+                        <div class="container-text-box">
+                            <p><span class="container-title">Cập Nhật Trò Chơi </span><span>| 9/10/2024</span></p>
+                            <p>ĐTCL phiên bản 14.20</p> 
+                            <p style="font-weight: normal;">14.20 sẽ tăng sức mạnh những tướng thiếu nhiệm màu và giảm sức mạnh những Nâng Cấp quá hỗn loạn!</p>
+                        </div>
+                    </a>  
+                </div> 
+                <div class="col-12 col-xl-4 p-0">
+                    <a href="#">
+                        <div class="image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1e9d7e2edb35ded0b54523951768b84ca1dfbbb1-1920x1080.jpg?auto=format&fit=fill&q=80&w=10000">       
+                        </div>
+                        <div class="container-text-box">
+                            <p><span class="container-title">Cập Nhật Trò Chơi </span><span>| 8/10/2024</span></p>
+                            <p>Tiêu Điểm Tướng Akali Vệ Binh Tinh Tú Tí Nị</p> 
+                            <p style="font-weight: normal;">Ánh sao sáng nhất để lại hình bóng tăm tối nhất.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-xl-4 p-0">
+                    <a href="#">
+                        <div class="image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/5589b6b7d4cb7e99650e5da6abffc70e2a37fce8-1920x1080.jpg?auto=format&fit=fill&q=80&w=10000">
+                        </div>
+                        <div class="container-text-box">
+                            <p><span class="container-title">Cập Nhật Trò Chơi </span><span>| 26/9/2024</span></p>
+                            <p>Tổng Quan Xếp Hạng Tái Hiện | Đấu Trường Chân Lý</p> 
+                            <p style="font-weight: normal;">Nhận Điểm Chiến Thuật và phần thưởng của Xếp Hạng Tái Hiện mới theo cách chơi của riêng bạn.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row" id="news-container">
+                <div class="col-12 col-xl-4 p-0">
+                    <a href="#">
+                        <div class="image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/bc0a4c9aa056a976c9916fd16de0c33d75e06726-1280x720.jpg?auto=format&fit=fill&q=80&w=10000">
+                        </div>
+                        <div class="container-text-box">
+                            <p><span class="container-title">Cập Nhật Trò Chơi </span><span>| 25/9/2024</span></p>
+                            <p>Đấu Trường Chân Lý - Thông Tin Bản Cập Nhật 14.19</p> 
+                            <p style="font-weight: normal;">14.19 sẽ đem tới Tái Hiện: Ánh Bình Minh, một thay đổi cứu cánh cho những người dị ứng Ong Mật, và một Triệu Hồi Kỳ Quái đáng kinh sợ.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-xl-4 p-0">
+                    <a href="#">
+                        <div class="image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/13f1a7c63913dd77bb50105dd68ffacb998aa0d9-1920x1080.jpg?auto=format&fit=fill&q=80&w=10000">
+                        </div>
+                        <div class="container-text-box">
+                            <p><span class="container-title">Cập Nhật Trò Chơi </span><span>| 24/9/2024</span></p>
+                            <p>Tiêu Điểm Tướng Orianna Tí Nị</p> 
+                            <p style="font-weight: normal;">Họ xinh đẹp, duyên dáng và sẽ đưa bạn tới vị trí xứng đáng trên đỉnh lobby.</p>
+                        </div>
+                    </a>
+                </div> 
+                <div class="col-12 col-xl-4 p-0">
+                    <a href="#">
+                        <div class="image-container">
+                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/307e37c7dc6c917314f2d0d845948fdac5dedc48-1920x1080.jpg?auto=format&fit=fill&q=80&w=10000">
+                        </div>
+                        <div class="container-text-box">
+                            <p><span class="container-title">Cập Nhật Trò Chơi </span><span>| 24/9/2024</span></p>
+                            <p>Mơ mộng về chiến thắng | Faker x T1 Orianna Tí Nị</p> 
+                            <p style="font-weight: normal;">Đến cả nhà vô địch cũng cần chút nghỉ ngơi thư giãn (dù có là Tí Nị hay không)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        <div class="row" id="more-news"></div>
+        </div>
+        <button id="load-more" class="btn-load-more">Hiển Thị Thêm</button>
+    </div>
+    </section>
+    <footer>
+        <div class="footer-icon d-flex justify-content-between">    
+            <a href="https://www.youtube.com/@dtclvn">
+                <img src="asset\Image\YT icon.png" style="width: 55px; margin-top: -5px;" class="footer-image" alt="YouTube Icon">
+            </a>  
+            <a href="https://www.facebook.com/DTCLVN">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-app-round-white-icon.png" class="footer-image" alt="Facebook Icon">
+                </a>   
+            <a href="https://www.instagram.com/dtclvn/">
+                <img src="https://troyredfern.com/wp-content/uploads/2021/04/new-instagram-logo-white-border-icon-png-large.png" class="footer-image" alt="Ins Icon">
+            </a>              
+        </div>  
+        <div class="footer-button">
+            <button class="button-28">CHÍNH SÁCH QUYỀN RIÊNG TƯ</button>
+            <button class="button-28">ĐIỀU KHOẢN DỊCH VỤ</button>
+            <button class="button-28">TÙY CHỌN COOKIE</button>
+        </div> 
+        <p class="footer-text">© 2019-2022 bởi Tập Đoàn Riot Games. ĐẤU TRƯỜNG CHÂN LÝ và mọi logo liên quan là nhãn hiệu,<br>nhãn hiệu dịch vụ và/hoặc nhãn hiệu đã đăng ký của Tập Đoàn Riot Games.</p>
+    </footer>
+    <script src="TinTic.js"></script>
+</body>
+</html>
