@@ -6,6 +6,8 @@
     <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/asset/Css/index.css">
 </head>
@@ -87,61 +89,302 @@
         </div>
         <div class="background-index">
             <div class="background-index-container">
-                <p class="text-1">Chuyện gì đang xảy ra vậy?</p>
+                <div class="title">
+                    <p class="text-1">Chuyện gì đang xảy ra vậy?</p>
+                    <a href="http://127.0.0.1:5500/asset/Html/TinTuc.html">
+                        <button class="button-28">XEM TẤT CẢ</button>
+                    </a>
+                </div>
                 <div class="row">
-                    <div class="col-12 col-xl-8" style="padding-right: 30px;">
+                    <div class="col-12 col-xl-7" style="padding-right: 30px;">
                         <div class="row-image-container">
                             <img src="/asset/Image/BackGroundMain.avif">
                         </div>
                         <p class="text-2">Kỳ Nghỉ Cuối Năm Của Chúng Tôi Đã Tới Rồi!</p>
                     </div>
-                    
-                    <div class="col-12 col-xl-4">
-                        <div class="column">
-                            <div class="info" style="margin-top: 0;">
-                                <div class="row">
-                                    <div class="col-6 col-md-6 col-xl-7">
-                                        <p class="info-text">ĐTCL phiên bản 14.20</p>
-                                        <img src=>
+                    <div class="col-12 col-xl-5">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6 col-xl-12">
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-6 col-md-6 col-xl-7">
+                                            <p class="info-text">ĐTCL phiên bản 14.20 14.20 sẽ tăng sức mạnh của nhiều tướng!</p>
+                                            <div class="info-icon">
+                                                <div class="custom-icon">
+                                                    <span class="icon" aria-hidden="true">
+                                                        <svg viewBox="0 0 2160 1680" style="margin-top: -5px">
+                                                            <g fill="#ffb400">
+                                                                <path d="M1371.72 836.5c-51.36-31.34-35.21-9.4-13.34 11.17 91.86 86.43 152.46 171.44 175.03 244.86 14.74 47.95 1.63 77.07-20.4 35.13-33.45-63.69-77.42-112.47-104.17-133.93-26.56-21.31-26.11-11.1-13.3 6 52.29 69.78 83.33 140.12 52.24 194.51-51.03 89.3-257.01 66.67-459.17-50.06-257.4-148.61-416.3-351.91-358.19-455.95 25.35-45.39 94.33-64.17 175.79-57.36 17.32 1.45 16.37-4.02 1.01-8.05-97.23-25.54-211.8-1.71-252.55 69.07-74.3 129.07 98.57 368.28 386.47 534.5 60.99 35.21 140.59 74.51 234.67 105.96 56.96 19.04 48.79 41.98-49.1 23.01-104.12-20.17-233.69-74.22-356.11-146.17-35.38-20.79-40.01-12.54-13.78 13.15 24.29 23.79 70.55 60.18 126.43 93.46 285.82 170.22 642.4 214.6 744.81 36.86 91.65-159.04-72.84-404.17-256.34-516.16z"></path>
+                                                                <path d="M453.51 213.51l154.12 266.95h319.82v527.1c80.52 65.01 214.26 133.68 305.09 139.73V480.46h319.82l154.12-266.95H453.51z"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="info-icon-text">Tin tức</p>
+                                            </div>                  
+                                        </div>
+                                        <div class="col-6 col-md-6 col-xl-5">
+                                            <div class="info-image">
+                                                <img src="/asset/Image/TT1.avif" alt="Main Image">
+                                            </div>  
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-xl-5">
-                                        <img src="/asset/Image/TT1.avif">
-                                    </div>
-                                </div>
+                                </div>    
                             </div>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-6 col-md-6 col-xl-7">
-                                        <p>ABC</p>
+                            <div class="col-md-12 col-lg-6 col-xl-12">
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-6 col-md-6 col-xl-7">
+                                            <p class="info-text">Tiêu Điểm Tướng Akali Vệ Binh Tinh Tú Tí Nị</p>
+                                            <div class="info-icon">
+                                                <div class="custom-icon">
+                                                    <span class="icon" aria-hidden="true">
+                                                        <svg viewBox="0 0 2160 1680" style="margin-top: -5px">
+                                                            <g fill="#ffb400">
+                                                                <path d="M1371.72 836.5c-51.36-31.34-35.21-9.4-13.34 11.17 91.86 86.43 152.46 171.44 175.03 244.86 14.74 47.95 1.63 77.07-20.4 35.13-33.45-63.69-77.42-112.47-104.17-133.93-26.56-21.31-26.11-11.1-13.3 6 52.29 69.78 83.33 140.12 52.24 194.51-51.03 89.3-257.01 66.67-459.17-50.06-257.4-148.61-416.3-351.91-358.19-455.95 25.35-45.39 94.33-64.17 175.79-57.36 17.32 1.45 16.37-4.02 1.01-8.05-97.23-25.54-211.8-1.71-252.55 69.07-74.3 129.07 98.57 368.28 386.47 534.5 60.99 35.21 140.59 74.51 234.67 105.96 56.96 19.04 48.79 41.98-49.1 23.01-104.12-20.17-233.69-74.22-356.11-146.17-35.38-20.79-40.01-12.54-13.78 13.15 24.29 23.79 70.55 60.18 126.43 93.46 285.82 170.22 642.4 214.6 744.81 36.86 91.65-159.04-72.84-404.17-256.34-516.16z"></path>
+                                                                <path d="M453.51 213.51l154.12 266.95h319.82v527.1c80.52 65.01 214.26 133.68 305.09 139.73V480.46h319.82l154.12-266.95H453.51z"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="info-icon-text">Tin tức</p>
+                                            </div>                  
+                                        </div>
+                                        <div class="col-6 col-md-6 col-xl-5">
+                                            <div class="info-image">
+                                                <img src="/asset/Image/TT2.avif" alt="Main Image">
+                                            </div>  
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-xl-5">
-                                        <img src="/asset/Image/TT14.avif">
-                                    </div>
-                                </div>
+                                </div>  
                             </div>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-6 col-md-6 col-xl-7">
-                                        <p>ABC</p>
+                            <div class="col-md-12 col-lg-6 col-xl-12">
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-6 col-md-6 col-xl-7">
+                                            <p class="info-text">Tổng Quan Xếp Hạng Tái Hiện | Đấu Trường Chân Lý</p>
+                                            <div class="info-icon">
+                                                <div class="custom-icon">
+                                                    <span class="icon" aria-hidden="true">
+                                                        <svg viewBox="0 0 2160 1680" style="margin-top: -5px">
+                                                            <g fill="#ffb400">
+                                                                <path d="M1371.72 836.5c-51.36-31.34-35.21-9.4-13.34 11.17 91.86 86.43 152.46 171.44 175.03 244.86 14.74 47.95 1.63 77.07-20.4 35.13-33.45-63.69-77.42-112.47-104.17-133.93-26.56-21.31-26.11-11.1-13.3 6 52.29 69.78 83.33 140.12 52.24 194.51-51.03 89.3-257.01 66.67-459.17-50.06-257.4-148.61-416.3-351.91-358.19-455.95 25.35-45.39 94.33-64.17 175.79-57.36 17.32 1.45 16.37-4.02 1.01-8.05-97.23-25.54-211.8-1.71-252.55 69.07-74.3 129.07 98.57 368.28 386.47 534.5 60.99 35.21 140.59 74.51 234.67 105.96 56.96 19.04 48.79 41.98-49.1 23.01-104.12-20.17-233.69-74.22-356.11-146.17-35.38-20.79-40.01-12.54-13.78 13.15 24.29 23.79 70.55 60.18 126.43 93.46 285.82 170.22 642.4 214.6 744.81 36.86 91.65-159.04-72.84-404.17-256.34-516.16z"></path>
+                                                                <path d="M453.51 213.51l154.12 266.95h319.82v527.1c80.52 65.01 214.26 133.68 305.09 139.73V480.46h319.82l154.12-266.95H453.51z"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="info-icon-text">Tin tức</p>
+                                            </div>                  
+                                        </div>
+                                        <div class="col-6 col-md-6 col-xl-5">
+                                            <div class="info-image">
+                                                <img src="/asset/Image/TT3.avif" alt="Main Image">
+                                            </div>  
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-xl-5">
-                                        <img src="/asset/Image/TT14.avif">
-                                    </div>
-                                </div>
+                                </div>  
                             </div>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-6 col-md-6 col-xl-7">
-                                        <p>ABC</p>
+                            <div class="col-md-12 col-lg-6 col-xl-12">
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-6 col-md-6 col-xl-7">
+                                            <p class="info-text">Đấu Trường Chân Lý - Thông Tin Bản Cập Nhật 14.19</p>
+                                            <div class="info-icon">
+                                                <div class="custom-icon">
+                                                    <span class="icon" aria-hidden="true">
+                                                        <svg viewBox="0 0 2160 1680" style="margin-top: -5px">
+                                                            <g fill="#ffb400">
+                                                                <path d="M1371.72 836.5c-51.36-31.34-35.21-9.4-13.34 11.17 91.86 86.43 152.46 171.44 175.03 244.86 14.74 47.95 1.63 77.07-20.4 35.13-33.45-63.69-77.42-112.47-104.17-133.93-26.56-21.31-26.11-11.1-13.3 6 52.29 69.78 83.33 140.12 52.24 194.51-51.03 89.3-257.01 66.67-459.17-50.06-257.4-148.61-416.3-351.91-358.19-455.95 25.35-45.39 94.33-64.17 175.79-57.36 17.32 1.45 16.37-4.02 1.01-8.05-97.23-25.54-211.8-1.71-252.55 69.07-74.3 129.07 98.57 368.28 386.47 534.5 60.99 35.21 140.59 74.51 234.67 105.96 56.96 19.04 48.79 41.98-49.1 23.01-104.12-20.17-233.69-74.22-356.11-146.17-35.38-20.79-40.01-12.54-13.78 13.15 24.29 23.79 70.55 60.18 126.43 93.46 285.82 170.22 642.4 214.6 744.81 36.86 91.65-159.04-72.84-404.17-256.34-516.16z"></path>
+                                                                <path d="M453.51 213.51l154.12 266.95h319.82v527.1c80.52 65.01 214.26 133.68 305.09 139.73V480.46h319.82l154.12-266.95H453.51z"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="info-icon-text">Tin tức</p>
+                                            </div>                  
+                                        </div>
+                                        <div class="col-6 col-md-6 col-xl-5">
+                                            <div class="info-image">
+                                                <img src="/asset/Image/TT4.avif" alt="Main Image">
+                                            </div>  
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-xl-5">
-                                        <img src="/asset/Image/TT14.avif">
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ourgame-background">
+            <div class="game-container">
+                <p class="text-1">Trò chơi của chúng tôi</p>
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="game-image">
+                            <img src="/asset/Image/Lol-xl.png" alt="LOL Image">       
+                            <img class="logo" style="top: 30%; left: 5%" src="/asset/Image/Lol-logo.svg" alt="LOL Logo">
+                            <div class="platform-icon">
+                                <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                <i class="fab fa-apple"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="game-image">
+                            <img src="/asset/Image/valep9act3.png" alt="VALORANT Image">
+                            <img class="logo" style="top: 20%; left: 5%" src="/asset/Image/Val-logo.svg" alt="VALORANT Logo">
+                            <div class="platform-icon" style="left: 14%">
+                                <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                <i class="fab fa-playstation" style="margin-right: 5px;"></i>
+                                <i class="fab fa-xbox"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="game-image">
+                            <img src="/asset/Image/tft-set-13-productcard.png" alt="TFT Image">       
+                            <img class="logo" style="top: 20%" src="/asset/Image/Tft-logo.svg" alt="TFT Logo">
+                            <div class="platform-icon" style="left: 16%;">
+                                <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                <i class="fab fa-apple"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="game-image">
+                            <img src="/asset/Image/wrka-2023.png" alt="Wildrift Image">
+                            <img class="logo" style="top: 20%" src="/asset/Image/Wildrift-logo.svg" alt="Wildrift Logo">
+                            <div class="platform-icon" style="left: 14%">
+                                <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                <i class="fab fa-playstation" style="margin-right: 5px;"></i>
+                                <i class="fab fa-xbox"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12" style="margin: 0 auto;">
+                        <div class="game-image">
+                            <img src="/asset/Image/lor-set-9-product-card.png" alt="Runtera Image">
+                            <img class="logo" style="top: 20%" src="/asset/Image/Runtera-logo.svg" alt="Runtera Logo">
+                            <div class="platform-icon" style="left: 14%">
+                                <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                <i class="fab fa-playstation" style="margin-right: 5px;"></i>
+                                <i class="fab fa-xbox"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-1">Esports</p>
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="game-image">
+                            <img src="/asset/Image/lol-esports-kv-2023.png" alt="Esports Image">       
+                            <img class="logo" style="top: 20%" src="/asset/Image/Esport-logo.svg" alt="Esports Logo">
+                            <div class="platform-icon" style="left: 16%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="game-image">
+                            <img src="/asset/Image/val.png" alt="Wildrift Image">
+                            <img class="logo" style="top: 20%" src="/asset/Image/Vtc-logo.svg" alt="VTC Logo">
+                            <div class="platform-icon" style="left: 17%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-1">Giải trí</p>
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="game-image">
+                            <img src="/asset/Image/arcane-card.png" alt="Arcane Image">       
+                            <img class="logo" style="top: 20%" src="/asset/Image/Arcane-logo.svg" alt="Arcane Logo">
+                            <div class="platform-icon" style="left: 16%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="game-image">
+                            <img src="/asset/Image/riot-music-card.png" alt="Riot-Music Image">
+                            <img class="logo" style="top: 20%" src="/asset/Image/Riot-Music-logo.svg" alt="Riot-Music Logo">
+                            <div class="platform-icon" style="left: 17%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-1">Riot Forge</p>
+                <div class="swiper-container" style="overflow: hidden; padding: 0 5px;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="game-image">
+                                <img src="/asset/Image/bandletale-productcard.png" alt="Bandletale Image">
+                                <div class="game-card">    
+                                    <img class="logo" style="top: 20%" src="/asset/Image/Bandletale-logo.svg" alt="Bandletale Logo">
+                                    <div class="platform-icon" style="left: 17%">
+                                        <i class="fab fa-windows"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="swiper-slide">
+                            <div class="game-image">
+                                <img src="/asset/Image/Sylas.jpg" alt="Riot-Music Image">
+                                <img class="logo" style="top: 20%" src="/asset/Image/Riot-Music-logo.svg" alt="Riot-Music Logo">
+                                <div class="platform-icon" id="sylas" style="left: 15%">
+                                    <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                    <i class="fa-brands fa-playstation" style="margin-right: 5px;"></i>
+                                    <i class="fa-brands fa-xbox"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="game-image">
+                                <img src="/asset/Image/Viego.png" alt="Viego Image">
+                                <img class="logo" style="top: 20%" src="/asset/Image/Ruined-King-Logo.svg" alt="Ruined-King Logo">
+                                <div class="platform-icon" id="viego" style="left: 15%">
+                                    <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                    <i class="fa-brands fa-playstation" style="margin-right: 5px;"></i>
+                                    <i class="fa-brands fa-xbox"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="game-image">
+                                <img src="/asset/Image/Zig.jpg" alt="Zig Image">
+                                <img class="logo" style="top: 20%" src="/asset/Image/Hextech-Logo.svg" alt="Hextech Logo">
+                                <div class="platform-icon" id="zig" style="left: 16%">
+                                    <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                    <i class="fa-solid fa-mobile-screen-button" style="margin-right: 2px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="game-image">
+                                <img src="/asset/Image/Ekko.png" alt="Ekko Image">
+                                <img class="logo" style="top: 20%" src="/asset/Image/Conv-Agence-Logo.svg" alt="Conv-Agence Logo">
+                                <div class="platform-icon" id="ekko" style="left: 15%">
+                                    <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                    <i class="fa-brands fa-playstation" style="margin-right: 5px;"></i>
+                                    <i class="fa-brands fa-xbox"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="game-image">
+                                <img style="margin-left: 0.5px;" src="/asset/Image/Nunu.jpg" id="nunu" alt="Nunu Image">
+                                <img class="logo" style="top: 20%" src="/asset/Image/Song-Of-Nunu-Logo.svg" alt="Song-Of-Nunu Logo">
+                                <div class="platform-icon" id="nunu" style="left: 15%">
+                                    <i class="fab fa-windows" style="margin-right: 5px;"></i>
+                                    <i class="fa-brands fa-playstation" style="margin-right: 5px;"></i>
+                                    <i class="fa-brands fa-xbox"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>

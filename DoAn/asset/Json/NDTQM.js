@@ -37,18 +37,20 @@ document.getElementById("loginBtn").addEventListener("click", function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,         
-        spaceBetween: 20,       
-        pagination: {
-            el: '.swiper-pagination',  
-            clickable: true,
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 3, 
+    spaceBetween: 10,
+    pagination: {
+        el: '.swiper-pagination', 
+        clickable: true,
+    },
+    slideToClickedSlide: true,
+    breakpoints: {
+        1200: { 
+            slidesPerView: 3,
         },
-        loop: true,                
-        autoplay: {
-            delay: 30000000,          
-            disableOnInteraction: false,
+        0: { 
+            slidesPerView: 1,
         },
-    });
+    },
 });

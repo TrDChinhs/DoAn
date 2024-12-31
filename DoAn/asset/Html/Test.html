@@ -3,49 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <style>
-        .swiper-container {
-            width: 100%;
-            height: 300px; /* Chiều cao của slider */
-        }
+    <title>News Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.5) 30%, black 100%);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
 
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
-        }
-    </style>
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.news-card {
+    margin-top: 80px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    backdrop-filter: brightness(1.1) blur(50px); 
+}
+
+.news-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.icon {
+    font-size: 20px;
+    color: #fdd835; /* Màu vàng cho biểu tượng */
+}
+
+.tag {
+    font-size: 14px;
+    font-weight: bold;
+    color: #bbbbbb; /* Màu nhạt hơn cho chữ TIN TỨC */
+    text-transform: uppercase;
+}
+
+</style>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Cards with Gradient</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/asset/Image/Gwen.avif" alt="Image 1"></div>
-            <div class="swiper-slide"><img src="/asset/Image/Zed.avif" alt="Image 2"></div>
-            <div class="swiper-slide"><img src="/asset/Image/MissFortune.avif" alt="Image 3"></div>
-            <div class="swiper-slide"><img src="/asset/Image/Lumie.avif" alt="Image 4"></div>
+    <div class="news-container">
+        <div class="news-card">
+            <h3>ĐTCL Macao Open: Những Điều Bạn Cần Biết</h3>
+            <div class="footer">
+                <span class="icon">⚡</span>
+                <span class="tag">TIN TỨC</span>
+            </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="news-card">
+            <h3>Giới Thiệu Project K: Trò Chơi Sưu Tập Thẻ Bài Liên Minh Huyền Thoại</h3>
+            <div class="footer">
+                <span class="icon">⚡</span>
+                <span class="tag">TIN TỨC</span>
+            </div>
+        </div>
+        <div class="news-card">
+            <h3>Hé Lộ Mùa 1, Giới Thiệu Lối Chơi & Tái Thiết Lập Xếp Hạng...</h3>
+            <div class="footer">
+                <span class="icon">⚡</span>
+                <span class="tag">TIN TỨC</span>
+            </div>
+        </div>
+        <div class="news-card">
+            <h3>Lịch Trình Phát Triển ĐTCL: Tướng 6 Vàng Bước Vào Arcane...</h3>
+            <div class="footer">
+                <span class="icon">⚡</span>
+                <span class="tag">TIN TỨC</span>
+            </div>
+        </div>
     </div>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,         
-            spaceBetween: 10,       
-            pagination: {
-                el: '.swiper-pagination',  
-                clickable: true,
-            },
-            loop: true,                
-            autoplay: {
-                delay: 3000,          
-                disableOnInteraction: false,
-            },
-        });
-    });
-</script>
+</html>
 
+</body>
 </html>
